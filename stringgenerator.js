@@ -1,4 +1,10 @@
-book_id = 394226
+//тут заменть на нужный id
+book_id = 000000
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function printstores(){
 pagearr=[]
 for (let i = 1; i <= 438; i++) {
