@@ -14,7 +14,7 @@ for i in range(1, len(f)):
     predec = f[i].replace('\n', '').replace(";base64,", "")
     decoding= predec + "=" * ((4 - len(predec) % 4) % 4)
     g = open("bookm/"+str(i)+".png", "wb")
-    g.write((base64.b64decode(decoding)))
+    g.write((base64.b64decode(decoding + "=" * 4)))
     g.close()
 
 for b in range(1, len(f), 6):
