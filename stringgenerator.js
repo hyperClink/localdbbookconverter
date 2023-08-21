@@ -1,5 +1,7 @@
 //тут заменть на нужный id
 book_id = 000000
+//заменить на число страниц
+pages_count = 500
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -7,7 +9,7 @@ function sleep(ms) {
 
 async function printstores(){
 pagearr=[]
-for (let i = 1; i <= 438; i++) {
+for (let i = 1; i <= pages_count; i++) {
 	console.log(book_id.toString() + ":" + i +":0")
 	await sleep(2)
   var omega = reader2cache.databases["reader2viewer"].transaction("page", 'readonly').objectStore("page").get(book_id.toString() + ":" + i +":0")
