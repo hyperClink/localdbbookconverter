@@ -15,6 +15,7 @@ for (let i = 1; i <= pages_count; i++) {
   var omega = reader2cache.databases["reader2viewer"].transaction("page", 'readonly').objectStore("page").get(book_id.toString() + ":" + i +":0")
 	omega.onsuccess = function(){pagearr.push(omega.result.slices.join())}
 	}
+await sleep(250)
 console.log(pagearr.join())
 return pagearr.join()
 }
